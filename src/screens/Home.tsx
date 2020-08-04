@@ -32,20 +32,11 @@ const Hello: React.FC<Props> = (props) => {
 
   return (
     <View> 
-			<Text>
-				Hello World {count}
-			</Text>
-
 			<FlatList
           data={users}
           keyExtractor={({ id }, index) => id.toString()}
           renderItem={renderItem}
         />
-
-			<Button
-        title="Go to Task"
-        onPress={() => props.navigation.navigate('Task')}
-      />
     </View>
   );
 };
