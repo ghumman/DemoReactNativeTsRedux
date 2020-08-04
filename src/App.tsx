@@ -25,17 +25,12 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import Home from "./screens/Home"; 
-import Task from "./screens/Task"; 
+import Details from "./screens/Details"; 
 /*
 const AppNavigator = createStackNavigator(
   {
-    Home: {
-      screen: Home,
-      navigationOptions: {
-        header: null
-      }
-    },
-    Task: Task,
+    Home: Home,
+    Details: Details
   },
   { initialRouteName: "Home"}
 ); 
@@ -50,7 +45,7 @@ const App: React.FC<Props> = (props) => {
 		<NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Task" component={Task} />
+        <Stack.Screen name="Details" component={Details} />
       </Stack.Navigator>
     </NavigationContainer>
 	)
