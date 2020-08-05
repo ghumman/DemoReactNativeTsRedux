@@ -7,6 +7,6 @@ In another terminal enter following command.
 ```
 npx react-native run-android
 ```
-![Home Screen](/src/assets/home.png)
-![Details Screen](/src/assets/details.png)
+![Home Screen](/src/assets/Home.png)
+![Details Screen](/src/assets/Details.png)
 
