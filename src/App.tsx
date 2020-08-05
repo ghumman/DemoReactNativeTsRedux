@@ -9,6 +9,9 @@
  */
 
 import React from 'react';
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import store from "./redux/store";
 import {
   View,
   Text,
@@ -26,28 +29,20 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Home from "./screens/Home"; 
 import Details from "./screens/Details"; 
-/*
-const AppNavigator = createStackNavigator(
-  {
-    Home: Home,
-    Details: Details
-  },
-  { initialRouteName: "Home"}
-); 
-*/
-// main app container
-// const AppContainer = createAppContainer(AppNavigator);
+
 
 const Stack = createStackNavigator();
 
 const App: React.FC<Props> = (props) => {
 	return (
-		<NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Details" component={Details} />
-      </Stack.Navigator>
-    </NavigationContainer>
+		<Provider store={store}>
+			<NavigationContainer>
+				<Stack.Navigator initialRouteName="Home">
+					<Stack.Screen name="Home" component={Home} />
+					<Stack.Screen name="Details" component={Details} />
+				</Stack.Navigator>
+			</NavigationContainer>
+		</Provider>
 	)
 }
 
