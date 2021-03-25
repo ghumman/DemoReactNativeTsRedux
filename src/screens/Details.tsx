@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Button, Text, View, FlatList, TouchableHighlight, SafeAreaView, StatusBar, StyleSheet } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import React, {  } from 'react';
+import { Text, View, SafeAreaView, StatusBar, StyleSheet } from 'react-native';
 import { connect } from "react-redux";
 
 const Details: React.FC<Props> = (props) => {
